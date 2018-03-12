@@ -1,0 +1,15 @@
+group 'com.example.simple.app'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.google.cloud:google-cloud-bigquery:0.32.0-beta'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

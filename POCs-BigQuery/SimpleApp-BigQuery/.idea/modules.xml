@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/simpleApp-bigQuery.iml" filepath="$PROJECT_DIR$/.idea/modules/simpleApp-bigQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/simpleApp-bigQuery_main.iml" filepath="$PROJECT_DIR$/.idea/modules/simpleApp-bigQuery_main.iml" group="simpleApp-bigQuery" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/simpleApp-bigQuery_test.iml" filepath="$PROJECT_DIR$/.idea/modules/simpleApp-bigQuery_test.iml" group="simpleApp-bigQuery" />
+    </modules>
+  </component>
+</project>
