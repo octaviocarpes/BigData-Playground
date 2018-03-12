@@ -10,9 +10,9 @@ public class Main {
 
         BigQuery bigquery = null;
         try {
-            bigquery = BigQueryOptions.newBuilder().setProjectId("projectId")
+            bigquery = BigQueryOptions.newBuilder().setProjectId("sunny-atrium-197413")
                     .setCredentials(
-                            ServiceAccountCredentials.fromStream(new FileInputStream("key.json"))
+                            ServiceAccountCredentials.fromStream(new FileInputStream("/Users/ilegra0365/Downloads/My First Project-3fe600b99ea3.json"))
                     ).build().getService();
         } catch (IOException e) {
             e.printStackTrace();
@@ -34,6 +34,7 @@ public class Main {
 
 // Create a job ID so that we can safely retry.
         JobId jobId = JobId.of(UUID.randomUUID().toString());
+        System.out.println(jobId.toString());
         Job queryJob = bigquery.create(JobInfo.newBuilder(queryConfig).setJobId(jobId).build());
 
 // Wait for the query to complete.

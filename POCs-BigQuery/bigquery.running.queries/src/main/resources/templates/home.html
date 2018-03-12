@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>BigQuery!</h1>
+    <input id="query-data" placeholder="Type your Query here!" style="width: 400px; height: 200px;">
+    <button onclick="sendQuery()">Submit your Query!</button>
+    <p id="response-text"></p>
+
+</body>
+<script>
+    function sendQuery() {
+        var query = document.querySelector('#query-data').value;
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("POST","http://localhost:8080/query",true);
+        xhr.responseType = 'text';
+        xhr.send(query);
+
+        xhr.onload = function (ev) {
+            if(xhr.readyState === xhr.DONE){
+                if(xhr.status === 200){
+                    console.log(xhr.responseText)
+                    var paragraph = document.querySelector('#response-text');
+                    paragraph.innerHTML = xhr.responseText;
+                }
+            }
+        }
+    }
+</script>
+</html>
